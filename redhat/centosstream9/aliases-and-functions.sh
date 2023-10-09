@@ -5,8 +5,8 @@ alias countpkg="rpm -qa | sort -fu | wc -l"
 pkgconflict() {
     # Printing conflicting package
     rpm -q --whatconflicts "$1"
-    echo "\n"
-    echo "Conflicting packages:\n"
+    echo -e "\n"
+    echo -e "Conflicting packages:\n"
     # Checking whether the conflicting package files are installed
     rpm -q --state $(rpm -q --whatconflicts "$1")
     
