@@ -1,7 +1,7 @@
 # This is will output the exact amount of packages installed on your system
 alias countpkg="rpm -qa | sort -fu | wc -l"
 
-# Checking if for package conflicts
+# Checking for package conflicts using rpm
 pkgconflict() {
     # Printing conflicting package
     rpm -q --whatconflicts "$1"
