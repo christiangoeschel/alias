@@ -13,5 +13,7 @@
 # none     regular file
 function l(){
 
-
+  echo -e 'Linux file types suffix list:\n"/" - directories, "@" - symbolic links, "*" - executables, "|" - FIFOs (named pipes),
+           "=" - sockets, ">" - doors, no suffix means it is a regular file\n\n'
+  ls -F $1
 }
