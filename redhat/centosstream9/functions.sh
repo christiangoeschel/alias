@@ -32,3 +32,13 @@ function l(){
         ls -F $1
 
 }
+
+# This will clear your systems known_hosts file
+# The known_hosts file stores the ssh public keys of the hosts accessed by a user.
+#
+# The syntax for this function is "clear_hostkey [IP] [known_host file path]"
+function clear_hostkey(){
+
+    cat .ssh/known_hosts | sed -e '/^{$1}' > $2"
+
+}
