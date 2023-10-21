@@ -42,3 +42,9 @@ function clear_hostkey(){
     cat .ssh/known_hosts | sed -e '/^{$1}' > $2"
 
 }
+
+
+# Function to follow a binaries complete link path (if it exists)
+function showlink(){
+    readlink -f $(which $1)
+}
