@@ -63,3 +63,14 @@ function importhist(){
 
 
 }
+
+
+# A function to search for the SSH port on a host
+function searchssh(){
+
+ip = $1
+
+# For loop to iterate through port range
+nc -v $ip $port
+
+}
