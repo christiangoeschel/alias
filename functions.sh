@@ -48,3 +48,18 @@ function clear_hostkey(){
 function showlink(){
     readlink -f $(which $1)
 }
+
+# Function that shows the last 'n' working directories you were in
+function lpath(){
+
+
+cat current_hisotry.txt | awk -F "  " '{ print $2 }'
+
+}
+
+
+# Write a specified users history to your current user's history file or history buffer
+function importhist(){
+
+
+}
