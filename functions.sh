@@ -74,3 +74,11 @@ ip = $1
 nc -v $ip $port
 
 }
+
+
+# Same as uptime only that the date shows the last system start up date
+function upsince(){
+
+    user_and_load="$(w | head -1 | awk -F"  " '{ print $3, $4 }'"
+
+}
